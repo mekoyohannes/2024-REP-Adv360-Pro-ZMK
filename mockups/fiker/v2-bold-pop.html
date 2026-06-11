@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiker · Bold Pop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Archivo+Black&display=swap" rel="stylesheet" />
+<style>
+  :root{--green:#0c9d5b;--gold:#ffcc00;--red:#ff3d54;--ink:#11121a;--paper:#fff6e9}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+  body{font-family:'Space Grotesk',system-ui,sans-serif;background:#e9e3d4;display:grid;place-items:center;min-height:100vh;padding:20px}
+  .stage{width:100%;max-width:430px;height:100dvh;max-height:920px;background:var(--paper);border:3px solid var(--ink);
+    border-radius:34px;overflow:hidden;position:relative;box-shadow:14px 14px 0 var(--ink)}
+  .content{height:100%;display:flex;flex-direction:column;padding:26px 24px 26px}
+
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:'Archivo Black',sans-serif;font-size:24px;color:var(--ink);display:flex;align-items:center;gap:9px}
+  .mark{width:36px;height:36px;background:var(--red);border:3px solid var(--ink);border-radius:11px;display:grid;place-items:center;font-size:18px;transform:rotate(-6deg)}
+  .lang{font-weight:700;font-size:13px;background:var(--ink);color:var(--paper);padding:8px 13px;border-radius:30px}
+
+  .deco{position:absolute;border:3px solid var(--ink);z-index:0}
+  .d1{width:74px;height:74px;background:var(--gold);border-radius:50%;top:120px;right:-18px;transform:rotate(8deg)}
+  .d2{width:56px;height:56px;background:var(--green);border-radius:16px;top:300px;left:-16px;transform:rotate(-12deg)}
+
+  .hero{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
+  .tag{align-self:flex-start;font-weight:700;font-size:13px;background:var(--green);color:#fff;border:3px solid var(--ink);
+    padding:7px 14px;border-radius:30px;transform:rotate(-2deg);box-shadow:4px 4px 0 var(--ink)}
+  h1{font-family:'Archivo Black',sans-serif;font-size:52px;line-height:.95;color:var(--ink);letter-spacing:-1px}
+  .hl{background:var(--gold);padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .hlr{background:var(--red);color:#fff;padding:0 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .sub{font-size:17px;line-height:1.45;color:#3a3a44;font-weight:500;max-width:330px}
+
+  .cards{display:flex;gap:10px;margin-top:4px}
+  .ucard{flex:1;border:3px solid var(--ink);border-radius:16px;padding:11px 12px;background:#fff;box-shadow:4px 4px 0 var(--ink)}
+  .ucard b{display:block;font-family:'Archivo Black',sans-serif;font-size:20px;color:var(--ink)}
+  .ucard span{font-size:12px;font-weight:600;color:#6a6a72}
+
+  .foot{margin-top:24px}
+  .cta{width:100%;border:3px solid var(--ink);cursor:pointer;font-family:'Archivo Black',sans-serif;font-size:19px;color:var(--ink);
+    padding:18px;border-radius:18px;background:var(--gold);box-shadow:6px 6px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+  .cta:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+  .alt{width:100%;margin-top:12px;border:3px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;
+    font-family:inherit;font-weight:700;font-size:15px;padding:14px;border-radius:16px;transition:background .15s}
+  .alt:hover{background:#f0e7d4}
+  .terms{text-align:center;font-size:12px;color:#7a7a82;margin-top:14px;font-weight:500}
+  .terms a{color:var(--ink);font-weight:700}
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="deco d1"></div><div class="deco d2"></div>
+    <div class="content">
+      <div class="top">
+        <div class="brand"><span class="mark">❤</span>FIKER</div>
+        <div class="lang">አማ / EN</div>
+      </div>
+
+      <div class="hero">
+        <span class="tag">★ for Ethiopians in their 20s</span>
+        <h1>FIND YOUR <span class="hl">HABESHA</span> <span class="hlr">MATCH</span></h1>
+        <p class="sub">Swipe into a community that speaks your language — literally. Real people, real culture, all over the world.</p>
+        <div class="cards">
+          <div class="ucard"><b>120K</b><span>young singles</span></div>
+          <div class="ucard"><b>90+</b><span>countries</span></div>
+          <div class="ucard"><b>4.9★</b><span>app rating</span></div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <button class="cta">CREATE MY PROFILE →</button>
+        <button class="alt">Log in</button>
+        <p class="terms">By joining you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiker — Splash Page Mockups</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Outfit',system-ui,sans-serif;background:#0b0e1a;color:#fff;padding:48px 24px 80px}
+  .head{max-width:1200px;margin:0 auto 40px;text-align:center}
+  h1{font-size:38px;font-weight:800;letter-spacing:-1px}
+  h1 span{background:linear-gradient(90deg,#ffd60a,#ff3b5c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p{color:rgba(255,255,255,.7);margin-top:10px;font-size:16px}
+  .grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+  .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:14px}
+  .label{display:flex;align-items:center;justify-content:space-between}
+  .label b{font-size:17px;font-weight:700}
+  .label small{font-size:12px;color:rgba(255,255,255,.55)}
+  .frame{position:relative;width:100%;aspect-ratio:430/820;border-radius:18px;overflow:hidden;background:#000}
+  .frame iframe{position:absolute;top:0;left:0;width:430px;height:820px;border:0;transform-origin:top left}
+  .open{text-align:center;padding:11px;border-radius:12px;background:linear-gradient(90deg,#ffd60a,#ff3b5c);color:#0b0e1a;font-weight:700;text-decoration:none;font-size:14px}
+</style>
+</head>
+<body>
+  <div class="head">
+    <h1>Fiker — 4 Splash <span>Mockups</span></h1>
+    <p>Dating for Ethiopians in their 20s, worldwide. Pick a direction (or mix &amp; match).</p>
+  </div>
+  <div class="grid" id="grid"></div>
+  <script>
+    const v=[
+      {f:'v1-aurora-glass.html',n:'1 · Aurora Glass',d:'Dreamy gradient mesh + glassmorphism'},
+      {f:'v2-bold-pop.html',n:'2 · Bold Pop',d:'Neo-brutalist, playful, high contrast'},
+      {f:'v3-neon-night.html',n:'3 · Neon Night',d:'Dark futuristic with swipe deck'},
+      {f:'v4-soft-light.html',n:'4 · Soft Light',d:'Warm, friendly, minimal'},
+    ];
+    const g=document.getElementById('grid');
+    v.forEach(x=>{
+      const c=document.createElement('div');c.className='card';
+      c.innerHTML=`<div class="label"><b>${x.n}</b><small>${x.d}</small></div>
+        <div class="frame"><iframe src="${x.f}" scrolling="no"></iframe></div>
+        <a class="open" href="${x.f}" target="_blank">Open full screen ↗</a>`;
+      g.appendChild(c);
+    });
+    function scale(){
+      document.querySelectorAll('.frame').forEach(fr=>{
+        const s=fr.clientWidth/430;
+        fr.querySelector('iframe').style.transform='scale('+s+')';
+        fr.style.height=(820*s)+'px';
+      });
+    }
+    window.addEventListener('load',scale);window.addEventListener('resize',scale);
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiker · Aurora Glass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#0fbf6b; --gold:#ffd60a; --red:#ff3b5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+  html,body{height:100%}
+  body{
+    font-family:'Outfit',system-ui,sans-serif;
+    background:#070b1a;color:#fff;overflow:hidden;
+    display:grid;place-items:center;
+  }
+  /* animated aurora mesh */
+  .stage{position:relative;width:100%;max-width:430px;height:100dvh;max-height:920px;
+    border-radius:38px;overflow:hidden;background:#0a0f24;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.85;mix-blend-mode:screen;animation:drift 14s ease-in-out infinite}
+  .b1{width:380px;height:380px;background:var(--red);top:-120px;left:-90px}
+  .b2{width:340px;height:340px;background:var(--gold);bottom:-100px;right:-90px;animation-delay:-4s}
+  .b3{width:300px;height:300px;background:var(--green);top:38%;left:30%;animation-delay:-8s}
+  .b4{width:240px;height:240px;background:#8a5cff;top:10%;right:-60px;animation-delay:-11s}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.15)}66%{transform:translate(-30px,40px) scale(.92)}}
+
+  .content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;padding:34px 28px 30px}
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.5px}
+  .mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--red),var(--gold));box-shadow:0 8px 24px rgba(255,59,92,.45)}
+  .lang{font-size:13px;font-weight:600;padding:7px 13px;border-radius:30px;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18)}
+
+  .hero{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px}
+  .amh{font-size:18px;color:rgba(255,255,255,.7);letter-spacing:2px;font-weight:300}
+  h1{font-size:50px;line-height:1.02;font-weight:800;letter-spacing:-1.5px}
+  h1 .grad{background:linear-gradient(110deg,var(--gold),var(--red) 60%,#ff9e6d);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:17px;line-height:1.5;color:rgba(255,255,255,.78);max-width:330px;font-weight:300}
+
+  .stat{display:flex;gap:10px;margin-top:6px}
+  .pill{font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+  .pill b{color:var(--gold)}
+
+  .glass{margin-top:auto;padding:22px;border-radius:28px;background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(24px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+  .cta{width:100%;border:none;cursor:pointer;font-family:inherit;font-weight:800;font-size:18px;color:#0a0f24;
+    padding:18px;border-radius:20px;background:linear-gradient(100deg,var(--gold),#ffe46b);
+    box-shadow:0 12px 30px rgba(255,214,10,.4);transition:transform .18s,box-shadow .18s;display:flex;align-items:center;justify-content:center;gap:10px}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(255,214,10,.55)}
+  .alt{width:100%;margin-top:12px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;
+    cursor:pointer;font-family:inherit;font-weight:600;font-size:15.5px;padding:15px;border-radius:18px;transition:background .18s}
+  .alt:hover{background:rgba(255,255,255,.1)}
+  .terms{text-align:center;font-size:12px;color:rgba(255,255,255,.55);margin-top:16px;line-height:1.5}
+  .terms a{color:rgba(255,255,255,.8)}
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+    <div class="content">
+      <div class="top">
+        <div class="brand"><div class="mark">💛</div>Fiker</div>
+        <div class="lang">አማ / EN ▾</div>
+      </div>
+
+      <div class="hero">
+        <div class="amh">ፍቅር · find your person</div>
+        <h1>Habesha hearts,<br><span class="grad">one world.</span></h1>
+        <p class="sub">The dating home for Ethiopians in their 20s — from Addis to Atlanta, Dubai to Toronto. Meet people who get your culture.</p>
+        <div class="stat">
+          <span class="pill"><b>120k+</b> in their 20s</span>
+          <span class="pill"><b>90+</b> countries</span>
+        </div>
+      </div>
+
+      <div class="glass">
+        <button class="cta">Get started — it's free ✨</button>
+        <button class="alt">I already have an account</button>
+        <p class="terms">By continuing you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy</a>.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

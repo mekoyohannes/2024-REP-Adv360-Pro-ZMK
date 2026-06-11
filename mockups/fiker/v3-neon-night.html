@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiker · Neon Night</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet" />
+<style>
+  :root{--green:#1fe086;--gold:#ffd60a;--red:#ff2d6f;--cyan:#27e0ff}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+  body{font-family:'Sora',system-ui,sans-serif;background:#04060f;display:grid;place-items:center;min-height:100vh;color:#fff}
+  .stage{position:relative;width:100%;max-width:430px;height:100dvh;max-height:920px;overflow:hidden;border-radius:38px;
+    background:radial-gradient(120% 80% at 50% -10%,#161a3a 0%,#070914 55%,#04060f 100%);box-shadow:0 40px 120px rgba(0,0,0,.7)}
+  /* grid floor */
+  .grid{position:absolute;inset:auto -20% -10% -20%;height:55%;
+    background-image:linear-gradient(rgba(39,224,255,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(39,224,255,.22) 1px,transparent 1px);
+    background-size:34px 34px;transform:perspective(420px) rotateX(62deg);transform-origin:bottom;
+    mask-image:linear-gradient(to top,#000,transparent);-webkit-mask-image:linear-gradient(to top,#000,transparent)}
+  .glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55}
+  .g1{width:300px;height:300px;background:var(--red);top:-80px;right:-60px}
+  .g2{width:260px;height:260px;background:var(--cyan);top:30%;left:-90px}
+
+  .content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;padding:30px 26px 28px}
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px}
+  .brand span{background:linear-gradient(90deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .mark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-size:16px;
+    background:linear-gradient(135deg,var(--red),var(--gold));box-shadow:0 0 22px rgba(255,45,111,.7)}
+  .lang{font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:30px;border:1px solid rgba(39,224,255,.35);color:var(--cyan);box-shadow:0 0 16px rgba(39,224,255,.2) inset}
+
+  /* floating cards preview */
+  .deck{position:relative;height:230px;margin:26px 0 6px}
+  .pcard{position:absolute;left:50%;top:0;width:170px;height:218px;border-radius:22px;transform-origin:bottom center;
+    background:linear-gradient(160deg,#1a1f3d,#0c0f20);border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 24px 50px rgba(0,0,0,.5);overflow:hidden}
+  .pcard::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%,rgba(255,255,255,.08),transparent)}
+  .c1{transform:translateX(-50%) rotate(-9deg) translateX(-44px) scale(.92);filter:brightness(.7)}
+  .c2{transform:translateX(-50%) rotate(9deg) translateX(44px) scale(.92);filter:brightness(.7)}
+  .c3{transform:translateX(-50%) rotate(0);z-index:3;box-shadow:0 0 0 1.5px var(--cyan),0 26px 60px rgba(39,224,255,.3)}
+  .face{height:138px;display:grid;place-items:center;font-size:54px}
+  .f1{background:linear-gradient(150deg,#ff2d6f,#ffd60a)}
+  .f2{background:linear-gradient(150deg,#1fe086,#27e0ff)}
+  .f3{background:linear-gradient(150deg,#8a5cff,#ff2d6f)}
+  .meta{padding:12px 13px}
+  .meta b{font-size:15px;display:block}
+  .meta small{font-size:11.5px;color:rgba(255,255,255,.6)}
+  .heart{position:absolute;right:10px;bottom:10px;width:26px;height:26px;border-radius:50%;background:var(--red);display:grid;place-items:center;font-size:13px;box-shadow:0 0 16px var(--red)}
+
+  .hero{margin-top:6px}
+  .kick{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);font-weight:600}
+  h1{font-size:42px;line-height:1.04;font-weight:800;letter-spacing:-1px;margin-top:8px}
+  h1 .n{background:linear-gradient(90deg,var(--gold),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:15.5px;line-height:1.5;color:rgba(255,255,255,.72);margin-top:10px;font-weight:300;max-width:340px}
+
+  .foot{margin-top:auto;padding-top:20px}
+  .cta{width:100%;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:17.5px;color:#04060f;
+    padding:17px;border-radius:18px;background:linear-gradient(90deg,var(--cyan),var(--green));
+    box-shadow:0 0 34px rgba(31,224,134,.45);transition:transform .16s,box-shadow .16s}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(31,224,134,.7)}
+  .row{display:flex;gap:10px;margin-top:12px}
+  .alt{flex:1;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;
+    font-family:inherit;font-weight:600;font-size:14px;padding:13px;border-radius:14px;transition:border-color .16s}
+  .alt:hover{border-color:var(--cyan)}
+  .terms{text-align:center;font-size:11.5px;color:rgba(255,255,255,.45);margin-top:14px}
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+    <div class="content">
+      <div class="top">
+        <div class="brand"><span class="mark">⚡</span><span>Fiker</span></div>
+        <div class="lang">አማ / EN</div>
+      </div>
+
+      <div class="deck">
+        <div class="pcard c1"><div class="face f1">🦁</div><div class="meta"><b>Liya, 24</b><small>Dubai 🇦🇪</small></div></div>
+        <div class="pcard c2"><div class="face f2">✨</div><div class="meta"><b>Sami, 27</b><small>Toronto 🇨🇦</small></div></div>
+        <div class="pcard c3"><div class="face f3">☕</div><div class="meta"><b>Hewan, 25</b><small>Addis 🇪🇹</small></div><div class="heart">♥</div></div>
+      </div>
+
+      <div class="hero">
+        <div class="kick">the future of habesha love</div>
+        <h1>Connect with <span class="n">your people</span>, anywhere.</h1>
+        <p class="sub">Built for Ethiopians in their 20s. Smart matching, real conversations, one global community.</p>
+      </div>
+
+      <div class="foot">
+        <button class="cta">Start matching →</button>
+        <div class="row">
+          <button class="alt">Log in</button>
+          <button class="alt">How it works</button>
+        </div>
+        <p class="terms">By continuing you agree to our Terms &amp; Privacy.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

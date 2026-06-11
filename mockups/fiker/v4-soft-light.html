@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fiker · Soft Light</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{--green:#13b074;--gold:#ffb800;--red:#ff5470;--ink:#1d1b2e}
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#eef0f7;display:grid;place-items:center;min-height:100vh;color:var(--ink)}
+  .stage{position:relative;width:100%;max-width:430px;height:100dvh;max-height:920px;overflow:hidden;border-radius:40px;
+    background:linear-gradient(180deg,#fff 0%,#fff4ee 60%,#ffe9f0 100%);box-shadow:0 40px 100px rgba(120,90,160,.28)}
+  .content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;padding:32px 28px 30px}
+
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:23px;color:var(--ink)}
+  .mark{width:36px;height:36px;border-radius:13px;display:grid;place-items:center;font-size:18px;color:#fff;
+    background:linear-gradient(135deg,var(--red),var(--gold));box-shadow:0 10px 22px rgba(255,84,112,.4)}
+  .lang{font-size:13px;font-weight:700;color:#6b6880;padding:8px 14px;border-radius:30px;background:#fff;box-shadow:0 6px 16px rgba(120,90,160,.12)}
+
+  /* soft 3D hero illustration */
+  .art{position:relative;height:262px;margin:18px 0 6px;display:grid;place-items:center}
+  .ring{position:absolute;width:230px;height:230px;border-radius:50%;background:
+    conic-gradient(from 200deg,var(--gold),var(--red),var(--green),var(--gold));filter:blur(2px);opacity:.9;
+    animation:spin 16s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .ring::after{content:"";position:absolute;inset:14px;border-radius:50%;background:#fff}
+  .av{position:absolute;border-radius:50%;display:grid;place-items:center;font-size:30px;color:#fff;
+    box-shadow:0 16px 34px rgba(120,90,160,.3),inset 0 -6px 14px rgba(0,0,0,.12)}
+  .a1{width:96px;height:96px;background:linear-gradient(150deg,#ff7a93,#ff5470);z-index:3}
+  .a2{width:60px;height:60px;background:linear-gradient(150deg,#22c98a,#13b074);top:24px;left:54px}
+  .a3{width:58px;height:58px;background:linear-gradient(150deg,#ffd25a,#ffb800);bottom:30px;right:58px}
+  .a4{width:46px;height:46px;background:linear-gradient(150deg,#9b7bff,#6f54ff);bottom:48px;left:48px}
+  .spark{position:absolute;font-size:20px;animation:float 3s ease-in-out infinite}
+  .s1{top:18px;right:70px}.s2{bottom:26px;left:30px;animation-delay:-1.5s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+  .hero{margin-top:8px}
+  .tag{display:inline-block;font-size:12.5px;font-weight:700;color:var(--green);background:#e4f7ee;padding:7px 14px;border-radius:30px}
+  h1{font-size:42px;line-height:1.06;font-weight:800;letter-spacing:-1px;margin-top:14px}
+  h1 .c{background:linear-gradient(90deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:16px;line-height:1.55;color:#5d5a72;margin-top:12px;font-weight:500;max-width:330px}
+
+  .trust{display:flex;align-items:center;gap:10px;margin-top:18px}
+  .faces{display:flex}
+  .faces span{width:30px;height:30px;border-radius:50%;border:2.5px solid #fff;margin-left:-9px;display:grid;place-items:center;font-size:13px;color:#fff}
+  .faces span:first-child{margin-left:0}
+  .trust small{font-size:12.5px;color:#6b6880;font-weight:600}
+  .trust b{color:var(--ink)}
+
+  .foot{margin-top:auto}
+  .cta{width:100%;border:none;cursor:pointer;font-family:inherit;font-weight:800;font-size:18px;color:#fff;
+    padding:18px;border-radius:22px;background:linear-gradient(100deg,var(--red),#ff7a55);
+    box-shadow:0 16px 34px rgba(255,84,112,.42);transition:transform .16s,box-shadow .16s}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 22px 44px rgba(255,84,112,.55)}
+  .alt{width:100%;margin-top:12px;border:none;background:#fff;color:var(--ink);cursor:pointer;
+    font-family:inherit;font-weight:700;font-size:15.5px;padding:16px;border-radius:20px;box-shadow:0 8px 20px rgba(120,90,160,.12);transition:transform .16s}
+  .alt:hover{transform:translateY(-1px)}
+  .terms{text-align:center;font-size:12px;color:#8a87a0;margin-top:16px;font-weight:500}
+  .terms a{color:var(--ink);font-weight:700}
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="content">
+      <div class="top">
+        <div class="brand"><span class="mark">♥</span>Fiker</div>
+        <div class="lang">አማ / EN ▾</div>
+      </div>
+
+      <div class="art">
+        <div class="ring"></div>
+        <div class="spark s1">✨</div><div class="spark s2">💛</div>
+        <div class="av a1">☕</div>
+        <div class="av a2">🦁</div>
+        <div class="av a3">🌍</div>
+        <div class="av a4">✦</div>
+      </div>
+
+      <div class="hero">
+        <span class="tag">● For Ethiopians, twenties &amp; worldwide</span>
+        <h1>Where Habesha<br><span class="c">hearts meet.</span></h1>
+        <p class="sub">A warm, simple place to meet Ethiopians your age — across the globe. Real connections, your culture, zero hassle.</p>
+        <div class="trust">
+          <div class="faces">
+            <span style="background:linear-gradient(150deg,#ff7a93,#ff5470)">L</span>
+            <span style="background:linear-gradient(150deg,#22c98a,#13b074)">S</span>
+            <span style="background:linear-gradient(150deg,#ffd25a,#ffb800)">H</span>
+            <span style="background:linear-gradient(150deg,#9b7bff,#6f54ff)">D</span>
+          </div>
+          <small><b>120,000+</b> young singles already joined</small>
+        </div>
+      </div>
+
+      <div class="foot">
+        <button class="cta">Join free in 30 seconds</button>
+        <button class="alt">I already have an account</button>
+        <p class="terms">By continuing you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy</a>.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
