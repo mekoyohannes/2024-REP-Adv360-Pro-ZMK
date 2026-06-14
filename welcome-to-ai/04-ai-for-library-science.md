@@ -1,5 +1,7 @@
 # AI for Library Science: Why You Picked the Right Field
 
+> A note just for you, Tezeta: your name means *memory* — and this whole field is humanity's project of remembering. Keep that in your back pocket. When a class gets dry or a tool gets confusing, remember you're not just learning software. You're learning how the species holds onto what it knows.
+
 Here's a secret that not enough people have noticed: **library science and AI are the same project wearing different clothes.** Both are about one question — *how do humans find the right knowledge at the right moment and trust it?* You're going to be fluent in both halves. That's rare and valuable.
 
 ## The deep connection

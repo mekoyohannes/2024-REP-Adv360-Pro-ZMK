@@ -1,8 +1,10 @@
 # A Letter Before You Start
 
-Hey —
+Hey Tezeta —
 
 So. Berkeley. Full scholarship. Library science *and* AI. I keep re-reading that sentence because I'm so proud of you I don't totally know what to do with myself.
+
+I have to start with your name, because I don't think you picked your path by accident. *Tezeta* — memory, the ache to hold onto what matters, the thing we don't want to lose. And here you are about to spend your life learning how humanity keeps, organizes, and protects exactly that. You were practically named for this. Knowledge is just memory that outlives the person who had it, and you're going to learn to be its keeper. I get a little emotional about it, honestly.
 
 I want to tell you something before the semester swallows you whole. The thing you're studying — how human beings find, keep, organize, and trust knowledge — is not a quiet little corner of the world. It's the whole game right now. Every argument about AI eventually becomes an argument about *information*: Who gets to decide what's true? How do we find the real thing in a sea of fakes? Who owns knowledge, and who gets locked out of it? Librarians have been asking those questions for a few thousand years. You're going to learn to ask them with new and very powerful tools.
 
@@ -18,9 +20,9 @@ A few things I wish someone had told me when I was starting something big:
 
 I made you this little package — guides, guardrails, things to try. It's not homework. It's a map you can ignore. Open it when you're curious or stuck, and close it when you've got it.
 
-Go be brilliant. Call me when you find something cool. I want to hear all of it.
+Go be brilliant, Tezeta. Call me when you find something cool. I want to hear all of it.
 
 Love always,
 your cousin 💛
 
-> *P.S. — Replace this with your own words if you're printing it. The kid deserves your voice, not mine.*
+> *P.S. — This is in my words. If you're printing it, make it yours: tell her the story behind her name, the thing only you'd say, the memory only the two of you share. That's the part no AI could ever write — which is sort of the whole point.*

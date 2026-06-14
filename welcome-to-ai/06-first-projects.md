@@ -1,6 +1,6 @@
 # Your First Five Projects
 
-Reading about AI is like reading about swimming. Get in the water. Each of these takes 15–45 minutes, needs no coding, and teaches you something real. Pick a free AI assistant (Claude, ChatGPT, and Gemini all have free tiers) and go.
+Okay Tezeta, reading about AI is like reading about swimming. Get in the water. Each of these takes 15–45 minutes, needs no coding, and teaches you something real. Pick a free AI assistant (Claude, ChatGPT, and Gemini all have free tiers) and go.
 
 > Tip: keep a little doc called `ai-notebook.md` where you paste prompts that worked, answers that surprised you, and times the AI got it wrong. That notebook will be more useful by spring than any tutorial.
 

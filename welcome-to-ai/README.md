@@ -1,8 +1,8 @@
-# 🌟 Welcome to the World of AI
+# 🌟 Tezeta's Welcome to the World of AI
 
-*A starter kit for someone about to study Library Science & AI at Berkeley.*
+*A starter kit for Tezeta — about to study Library Science & AI at Berkeley.*
 
-Congratulations on the acceptance **and** the full scholarship — that's a big deal, and it says everything about how hard you've worked. You're walking into one of the most interesting moments in the history of information: the field you chose (organizing, finding, and protecting knowledge) is being reinvented by AI in real time. You're not late. You're early, and you're in exactly the right place.
+Congratulations on the acceptance **and** the full scholarship, Tezeta — that's a big deal, and it says everything about how hard you've worked. You're walking into one of the most interesting moments in the history of information: the field you chose (organizing, finding, and protecting knowledge) is being reinvented by AI in real time. You're not late. You're early, and you're in exactly the right place.
 
 This little package is a map, not a textbook. Read it in any order. Skip what's boring. Come back to it whenever you feel lost.
 
