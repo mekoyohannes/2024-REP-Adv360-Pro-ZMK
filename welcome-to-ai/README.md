@@ -18,6 +18,8 @@ This little package is a map, not a textbook. Read it in any order. Skip what's 
 | [`06-first-projects.md`](06-first-projects.md) | Five things to actually try this week. |
 | [`07-glossary.md`](07-glossary.md) | Decoder ring for the buzzwords. |
 | [`08-resources.md`](08-resources.md) | Books, courses, people, and places to keep learning. |
+| [`09-cheat-sheet.md`](09-cheat-sheet.md) | The whole thing on one printable page. Pin it up. |
+| [`10-dear-future-tezeta.md`](10-dear-future-tezeta.md) | A letter for you to fill in now and open at graduation. |
 
 ## The one-paragraph version, if you read nothing else
 
