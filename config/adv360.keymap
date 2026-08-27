@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SCREENSHOT_KONJO_TOG";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(N5))>, <&kp KP_DOT>;
+            bindings = <&kp KP_MULTIPLY>, <&kp KP_DOT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
