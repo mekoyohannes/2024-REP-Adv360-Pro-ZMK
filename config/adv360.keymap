@@ -45,9 +45,11 @@
 
         konjo_tog: konjo_tog {
             compatible = "zmk,behavior-mod-morph";
-            label = "KONJO_TOGGLE_CLIP";
+            label = "SCREENSHOT_KONJO_TOGGLE";
             #binding-cells = <0>;
-            bindings = <&kp KP_DOT>, <&kp LC(LA(LG(KP_PLUS)))>;
+            bindings = <&kp LG(LS(N5))>, <&kp KP_DOT>;
+            // Shift is consumed by the morph, so Keypad Dot reaches Konjo
+            // unshifted, exactly as it did before the swap.
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
