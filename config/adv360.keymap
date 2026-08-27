@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SCREENSHOT_KONJO_TOGGLE";
             #binding-cells = <0>;
-            bindings = <&kp LG(LS(N5))>, <&kp KP_DOT>;
+            bindings = <&kp F18>, <&kp KP_DOT>;
             // Shift is consumed by the morph, so Keypad Dot reaches Konjo
             // unshifted, exactly as it did before the swap.
             mods = <(MOD_LSFT|MOD_RSFT)>;
