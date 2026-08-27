@@ -45,9 +45,9 @@
 
         konjo_tog: konjo_tog {
             compatible = "zmk,behavior-mod-morph";
-            label = "KONJO_TOGGLE_CLIP";
+            label = "SCREENSHOT_KONJO_TOG";
             #binding-cells = <0>;
-            bindings = <&kp KP_DOT>, <&kp LC(LA(LG(KP_PLUS)))>;
+            bindings = <&kp LG(LS(N5))>, <&kp KP_DOT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
