@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VOL_UP_MIC_UP";
             #binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp LC(LA(LG(UP)))>;
+            bindings = <&kp C_VOL_UP>, <&kp LC(LA(UP))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "VOL_DN_MIC_DN";
             #binding-cells = <0>;
-            bindings = <&kp C_VOL_DN>, <&kp LC(LA(LG(DOWN)))>;
+            bindings = <&kp C_VOL_DN>, <&kp LC(LA(DOWN))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
